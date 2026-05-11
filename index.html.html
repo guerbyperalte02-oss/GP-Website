@@ -1,0 +1,2038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GP Light Sign — Custom Neon Lights</title>
+  <meta name="description" content="Handcrafted custom neon signs for businesses, events & homes. Design your own sign online and get a free quote in 24 hours. Built to glow, made to last." />
+  <meta name="keywords" content="custom neon signs, neon light business, LED neon, neon wedding signs, neon bar signs, personalised neon" />
+  <meta property="og:title" content="GP Light Sign — Custom Neon Lights" />
+  <meta property="og:description" content="Design your own custom neon sign. Businesses, weddings, home décor. Free quote in 24 hours." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gplightsign.netlify.app" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="GP Light Sign — Custom Neon Lights" />
+  <meta name="twitter:description" content="Design your own custom neon sign. Free quote in 24 hours." />
+  <link rel="canonical" href="https://gplightsign.netlify.app" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --hot-pink: #ff2d78;
+      --electric-blue: #00cfff;
+      --acid-green: #39ff14;
+      --deep: #08060e;
+      --surface: #110d1e;
+      --text: #f0eaf8;
+      --muted: #7a6e8e;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--deep);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      background: rgba(8,6,14,0.7);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,45,120,0.15);
+    }
+    .logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      letter-spacing: 0.12em;
+      color: var(--hot-pink);
+      text-shadow: 0 0 12px var(--hot-pink), 0 0 30px var(--hot-pink);
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none; font-size: 0.875rem;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--electric-blue); }
+    .nav-cta {
+      padding: 0.5rem 1.4rem;
+      border: 1.5px solid var(--hot-pink);
+      border-radius: 2px;
+      color: var(--hot-pink) !important;
+      text-shadow: 0 0 8px var(--hot-pink);
+      box-shadow: 0 0 10px rgba(255,45,120,0.25);
+      transition: background 0.2s, box-shadow 0.2s !important;
+    }
+    .nav-cta:hover {
+      background: rgba(255,45,120,0.12) !important;
+      box-shadow: 0 0 20px rgba(255,45,120,0.4) !important;
+      color: var(--hot-pink) !important;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 30% 50%, rgba(255,45,120,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 40% at 75% 40%, rgba(0,207,255,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-tag {
+      font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--electric-blue);
+      text-shadow: 0 0 8px var(--electric-blue);
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.8s ease both;
+    }
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(4rem, 12vw, 10rem);
+      line-height: 0.92;
+      letter-spacing: 0.04em;
+      animation: fadeUp 0.9s 0.1s ease both;
+    }
+    .hero h1 .pink {
+      color: var(--hot-pink);
+      text-shadow: 0 0 20px var(--hot-pink), 0 0 60px rgba(255,45,120,0.5);
+    }
+    .hero h1 .blue {
+      color: var(--electric-blue);
+      text-shadow: 0 0 20px var(--electric-blue), 0 0 60px rgba(0,207,255,0.4);
+    }
+    .hero-sub {
+      max-width: 520px; margin: 2rem auto 0;
+      font-size: 1.05rem; color: var(--muted); line-height: 1.7;
+      font-weight: 300;
+      animation: fadeUp 1s 0.2s ease both;
+    }
+    .hero-actions {
+      display: flex; gap: 1rem; margin-top: 2.5rem; justify-content: center; flex-wrap: wrap;
+      animation: fadeUp 1s 0.3s ease both;
+    }
+    .btn-primary {
+      padding: 0.85rem 2.2rem;
+      background: var(--hot-pink);
+      color: #fff; font-weight: 500; letter-spacing: 0.05em;
+      border: none; cursor: pointer; font-size: 0.95rem;
+      text-decoration: none;
+      box-shadow: 0 0 20px rgba(255,45,120,0.5), 0 0 60px rgba(255,45,120,0.2);
+      transition: box-shadow 0.3s, transform 0.2s;
+    }
+    .btn-primary:hover {
+      box-shadow: 0 0 35px rgba(255,45,120,0.7), 0 0 80px rgba(255,45,120,0.3);
+      transform: translateY(-2px);
+    }
+    .btn-ghost {
+      padding: 0.85rem 2.2rem;
+      border: 1.5px solid rgba(240,234,248,0.2);
+      color: var(--text); font-size: 0.95rem; letter-spacing: 0.05em;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--electric-blue); color: var(--electric-blue); }
+
+    /* ── NEON SIGN DEMO ── */
+    .sign-demo {
+      margin-top: 4rem;
+      animation: fadeUp 1s 0.4s ease both;
+    }
+    .neon-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      letter-spacing: 0.1em;
+      color: var(--acid-green);
+      text-shadow:
+        0 0 5px #fff,
+        0 0 10px var(--acid-green),
+        0 0 25px var(--acid-green),
+        0 0 50px var(--acid-green),
+        0 0 100px rgba(57,255,20,0.4);
+      animation: flicker 4s infinite;
+    }
+
+    /* ── STATS ── */
+    .stats {
+      display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap;
+      padding: 3rem 2rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      background: var(--surface);
+    }
+    .stat { text-align: center; }
+    .stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem; letter-spacing: 0.05em;
+      color: var(--hot-pink);
+      text-shadow: 0 0 15px rgba(255,45,120,0.5);
+    }
+    .stat-label { font-size: 0.8rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.25rem; }
+
+    /* ── SERVICES ── */
+    .section { padding: 6rem 2rem; max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--electric-blue); text-shadow: 0 0 8px var(--electric-blue);
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      letter-spacing: 0.05em; line-height: 1;
+      margin-bottom: 3.5rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 2rem;
+      transition: border-color 0.3s, transform 0.3s;
+      position: relative; overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: var(--card-accent, var(--hot-pink));
+      box-shadow: 0 0 10px var(--card-accent, var(--hot-pink));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.4s;
+    }
+    .card:hover::before { transform: scaleX(1); }
+    .card:hover { border-color: rgba(255,255,255,0.12); transform: translateY(-4px); }
+    .card-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 0.06em; margin-bottom: 0.75rem; }
+    .card p { color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
+
+    /* ── PROCESS ── */
+    .process-bg { background: var(--surface); }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+    .step { text-align: center; padding: 1.5rem; }
+    .step-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 4rem; line-height: 1;
+      color: transparent;
+      -webkit-text-stroke: 1.5px var(--hot-pink);
+      text-shadow: none;
+      opacity: 0.6;
+    }
+    .step h4 { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.06em; margin: 0.5rem 0; }
+    .step p { color: var(--muted); font-size: 0.875rem; line-height: 1.6; }
+
+    /* ── CTA ── */
+    .cta-section {
+      text-align: center; padding: 7rem 2rem;
+      position: relative; overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(255,45,120,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 7vw, 6rem);
+      letter-spacing: 0.04em; line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+    .cta-section p { color: var(--muted); max-width: 480px; margin: 0 auto 2.5rem; line-height: 1.7; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 2rem 2.5rem;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+      color: var(--muted); font-size: 0.8rem;
+    }
+    footer .logo { font-size: 1.3rem; }
+
+    /* ── GALLERY ── */
+    .gallery-bg { background: var(--surface); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 1rem;
+    }
+    @media (max-width: 700px) {
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .gallery-item {
+      position: relative; overflow: hidden; cursor: pointer;
+      aspect-ratio: 4/3;
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    .gallery-item:first-child {
+      grid-column: span 2;
+      aspect-ratio: 2/1;
+    }
+    .gallery-item:hover { transform: scale(1.02); border-color: rgba(255,255,255,0.15); }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-neon {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 0.08em;
+      text-align: center;
+      padding: 1rem;
+      line-height: 1.1;
+      pointer-events: none;
+      user-select: none;
+    }
+    .gallery-overlay {
+      position: absolute; inset: 0;
+      background: rgba(8,6,14,0.6);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .gallery-overlay-tag {
+      font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(255,255,255,0.5); margin-bottom: 0.4rem;
+    }
+    .gallery-overlay-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem; letter-spacing: 0.08em;
+    }
+    .gallery-use-btn {
+      margin-top: 0.75rem;
+      padding: 0.4rem 1rem;
+      border: 1px solid rgba(255,255,255,0.3);
+      background: transparent; color: #fff;
+      font-size: 0.75rem; letter-spacing: 0.1em; cursor: pointer;
+      transition: background 0.2s;
+    }
+    .gallery-use-btn:hover { background: rgba(255,255,255,0.1); }
+
+    /* ── DESIGN STUDIO ── */
+    .designer-bg { background: var(--deep); }
+    .designer-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    @media (max-width: 768px) {
+      .designer-wrap { grid-template-columns: 1fr; }
+      .nav-links { gap: 1rem; }
+    }
+    .controls-panel {
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.07);
+      padding: 2rem;
+    }
+    .control-group { margin-bottom: 1.75rem; }
+    .control-label {
+      display: block;
+      font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 0.75rem;
+    }
+    .text-input {
+      width: 100%; padding: 0.75rem 1rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 1rem;
+      outline: none; transition: border-color 0.2s;
+    }
+    .text-input:focus { border-color: var(--hot-pink); }
+    .color-swatches {
+      display: flex; gap: 0.6rem; flex-wrap: wrap;
+    }
+    .swatch {
+      width: 36px; height: 36px; border-radius: 50%; cursor: pointer;
+      border: 2px solid transparent;
+      transition: transform 0.2s, border-color 0.2s;
+      position: relative;
+    }
+    .swatch.active { border-color: #fff; transform: scale(1.15); }
+    .swatch:hover { transform: scale(1.1); }
+    .font-options {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;
+    }
+    .font-btn {
+      padding: 0.6rem 0.75rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted); cursor: pointer; font-size: 0.85rem;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+      text-align: center;
+    }
+    .font-btn.active {
+      border-color: var(--hot-pink);
+      color: var(--hot-pink);
+      background: rgba(255,45,120,0.08);
+    }
+    .font-btn:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
+    .size-slider {
+      -webkit-appearance: none; appearance: none;
+      width: 100%; height: 4px;
+      background: rgba(255,255,255,0.1); outline: none;
+      border-radius: 2px;
+    }
+    .size-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 18px; height: 18px; border-radius: 50%;
+      background: var(--hot-pink);
+      box-shadow: 0 0 8px var(--hot-pink);
+      cursor: pointer;
+    }
+    .bg-options { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .bg-btn {
+      padding: 0.5rem 1rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: transparent;
+      color: var(--muted); cursor: pointer; font-size: 0.8rem;
+      transition: all 0.2s;
+    }
+    .bg-btn.active { border-color: var(--electric-blue); color: var(--electric-blue); }
+
+    /* Preview */
+    .preview-panel { position: sticky; top: 6rem; }
+    .preview-box {
+      width: 100%; aspect-ratio: 16/9;
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid rgba(255,255,255,0.08);
+      overflow: hidden; position: relative;
+      transition: background 0.4s;
+    }
+    .preview-sign {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 0.08em;
+      text-align: center;
+      padding: 1rem 2rem;
+      transition: all 0.3s;
+      max-width: 90%;
+      word-break: break-word;
+      line-height: 1.1;
+    }
+    .preview-label {
+      margin-top: 1rem;
+      font-size: 0.75rem; color: var(--muted); letter-spacing: 0.1em; text-align: center;
+    }
+    .order-btn-wrap { margin-top: 1.5rem; }
+    .order-btn-wrap .btn-primary {
+      width: 100%; display: block; text-align: center; padding: 1rem;
+      font-size: 1rem; letter-spacing: 0.1em;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testi-bg { background: var(--deep); }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .testi-card {
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 1.75rem;
+      position: relative;
+    }
+    .testi-stars { color: var(--hot-pink); font-size: 0.85rem; margin-bottom: 1rem; letter-spacing: 0.1em; }
+    .testi-quote { color: var(--text); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.25rem; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 0.75rem; }
+    .testi-avatar {
+      width: 38px; height: 38px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Bebas Neue', sans-serif; font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .testi-name { font-weight: 500; font-size: 0.875rem; }
+    .testi-role { font-size: 0.75rem; color: var(--muted); margin-top: 0.1rem; }
+
+    /* ── FAQ ── */
+    .faq-bg { background: var(--surface); }
+    .faq-list { max-width: 720px; }
+    .faq-item {
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      overflow: hidden;
+    }
+    .faq-q {
+      width: 100%; display: flex; align-items: center; justify-content: space-between;
+      padding: 1.25rem 0; background: none; border: none; color: var(--text);
+      font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 500;
+      cursor: pointer; text-align: left; gap: 1rem;
+    }
+    .faq-q:hover { color: var(--electric-blue); }
+    .faq-icon { font-size: 1.2rem; flex-shrink: 0; transition: transform 0.3s; color: var(--hot-pink); }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+      color: var(--muted); font-size: 0.9rem; line-height: 1.8;
+    }
+    .faq-item.open .faq-a { max-height: 200px; padding-bottom: 1.25rem; }
+
+    /* ── PRICE ESTIMATOR ── */
+    .price-bg { background: var(--deep); }
+    .price-wrap {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+    }
+    @media (max-width: 700px) { .price-wrap { grid-template-columns: 1fr; } }
+    .price-options { display: flex; flex-direction: column; gap: 1.25rem; }
+    .price-row { display: flex; flex-direction: column; gap: 0.5rem; }
+    .price-row-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .price-btns { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .price-btn {
+      padding: 0.5rem 1rem; border: 1px solid rgba(255,255,255,0.1);
+      background: transparent; color: var(--muted); cursor: pointer; font-size: 0.85rem;
+      transition: all 0.2s; font-family: 'DM Sans', sans-serif;
+    }
+    .price-btn.active { border-color: var(--acid-green); color: var(--acid-green); background: rgba(57,255,20,0.06); }
+    .price-result {
+      background: var(--surface); border: 1px solid rgba(255,255,255,0.08);
+      padding: 2.5rem; text-align: center;
+    }
+    .price-from { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
+    .price-amount {
+      font-family: 'Bebas Neue', sans-serif; font-size: 5rem; line-height: 1;
+      color: var(--acid-green);
+      text-shadow: 0 0 15px var(--acid-green), 0 0 40px rgba(57,255,20,0.3);
+      transition: all 0.3s;
+    }
+    .price-note { font-size: 0.8rem; color: var(--muted); margin-top: 0.75rem; line-height: 1.6; }
+    .price-cta { margin-top: 1.5rem; display: block; }
+
+    /* ── QUOTE FORM ── */
+    .form-wrap { max-width: 680px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-group.full { grid-column: span 2; }
+    @media (max-width: 600px) { .form-group.full { grid-column: span 1; } }
+    .form-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .form-input, .form-select, .form-textarea {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.95rem;
+      padding: 0.75rem 1rem; outline: none; transition: border-color 0.2s;
+      width: 100%;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--hot-pink); }
+    .form-select { cursor: pointer; }
+    .form-select option { background: var(--surface); }
+    .form-textarea { resize: vertical; min-height: 110px; }
+    .form-submit {
+      margin-top: 1rem;
+      padding: 1rem 2.5rem;
+      background: var(--hot-pink); color: #fff;
+      border: none; cursor: pointer; font-size: 1rem; font-family: 'DM Sans', sans-serif;
+      font-weight: 500; letter-spacing: 0.06em;
+      box-shadow: 0 0 20px rgba(255,45,120,0.4);
+      transition: box-shadow 0.3s, transform 0.2s;
+    }
+    .form-submit:hover { box-shadow: 0 0 35px rgba(255,45,120,0.6); transform: translateY(-2px); }
+    .form-success {
+      display: none; padding: 1rem 1.5rem;
+      background: rgba(57,255,20,0.08); border: 1px solid rgba(57,255,20,0.3);
+      color: var(--acid-green); font-size: 0.9rem; margin-top: 1rem;
+    }
+
+    /* ── WHATSAPP FLOAT ── */
+    .whatsapp-float {
+      position: fixed; bottom: 1.75rem; right: 1.75rem; z-index: 200;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: #25d366;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      text-decoration: none; font-size: 1.6rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.6); }
+    .whatsapp-tooltip {
+      position: absolute; right: 66px; top: 50%; transform: translateY(-50%);
+      background: #25d366; color: #fff; font-size: 0.75rem;
+      padding: 0.35rem 0.75rem; white-space: nowrap; border-radius: 3px;
+      opacity: 0; pointer-events: none; transition: opacity 0.2s;
+    }
+    .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; }
+
+    /* ── FOOTER UPDATE ── */
+    .footer-main {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 3rem 2.5rem 1.5rem;
+      display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 2rem;
+    }
+    @media (max-width: 700px) { .footer-main { grid-template-columns: 1fr; } }
+    .footer-brand p { color: var(--muted); font-size: 0.875rem; line-height: 1.7; margin-top: 0.75rem; max-width: 260px; }
+    .footer-col h5 { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.12em; font-size: 1rem; margin-bottom: 1rem; color: var(--text); }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-col ul a { color: var(--muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+    .footer-col ul a:hover { color: var(--electric-blue); }
+    .social-links { display: flex; gap: 0.75rem; margin-top: 1rem; }
+    .social-link {
+      width: 38px; height: 38px;
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none; font-size: 1rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .social-link:hover { border-color: var(--hot-pink); background: rgba(255,45,120,0.1); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.04);
+      padding: 1.25rem 2.5rem;
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;
+      font-size: 0.75rem; color: var(--muted);
+    }
+
+    /* ── STRIPE PAYMENT ── */
+    .payment-bg { background: var(--surface); }
+    .payment-wrap {
+      display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: start;
+    }
+    @media (max-width: 780px) { .payment-wrap { grid-template-columns: 1fr; } }
+    .payment-info h3 {
+      font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 0.06em;
+      margin-bottom: 1rem;
+    }
+    .payment-info p { color: var(--muted); font-size: 0.9rem; line-height: 1.75; margin-bottom: 1rem; }
+    .payment-features { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.5rem; }
+    .payment-features li { font-size: 0.875rem; color: var(--muted); display: flex; align-items: center; gap: 0.6rem; }
+    .payment-features li::before { content: '✦'; color: var(--acid-green); font-size: 0.7rem; flex-shrink: 0; }
+    .payment-badges { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+    .payment-badge {
+      padding: 0.3rem 0.7rem; border: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+    }
+    .stripe-form {
+      background: #0e0b1a; border: 1px solid rgba(255,255,255,0.08); padding: 2rem;
+    }
+    .stripe-form-title {
+      font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.06em;
+      margin-bottom: 0.25rem;
+    }
+    .stripe-form-sub { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.5rem; }
+    .deposit-amount-box {
+      background: rgba(57,255,20,0.06); border: 1px solid rgba(57,255,20,0.2);
+      padding: 1rem 1.25rem; margin-bottom: 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .deposit-label { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); }
+    .deposit-value {
+      font-family: 'Bebas Neue', sans-serif; font-size: 2rem;
+      color: var(--acid-green); text-shadow: 0 0 10px rgba(57,255,20,0.4);
+    }
+    .stripe-field-group { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 1rem; }
+    .stripe-field-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); }
+    .stripe-field-input {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+      color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.95rem;
+      padding: 0.7rem 1rem; outline: none; transition: border-color 0.2s; width: 100%;
+    }
+    .stripe-field-input:focus { border-color: var(--electric-blue); }
+    .stripe-card-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .stripe-card-box {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+      padding: 0.7rem 1rem; font-size: 0.875rem; color: var(--muted);
+      display: flex; align-items: center; gap: 0.5rem; letter-spacing: 0.06em;
+    }
+    .stripe-pay-btn {
+      width: 100%; margin-top: 0.5rem; padding: 1rem;
+      background: var(--hot-pink); color: #fff; border: none;
+      font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 500;
+      letter-spacing: 0.05em; cursor: pointer;
+      box-shadow: 0 0 20px rgba(255,45,120,0.4);
+      transition: box-shadow 0.3s, transform 0.2s;
+      display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+    }
+    .stripe-pay-btn:hover { box-shadow: 0 0 35px rgba(255,45,120,0.6); transform: translateY(-2px); }
+    .stripe-pay-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    .stripe-secure { display: flex; align-items: center; gap: 0.4rem; margin-top: 0.75rem; justify-content: center; }
+    .stripe-secure span { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.05em; }
+    .stripe-powered { text-align: center; margin-top: 0.5rem; font-size: 0.7rem; color: rgba(255,255,255,0.2); }
+    .stripe-success {
+      display: none; text-align: center; padding: 2rem 1rem;
+    }
+    .stripe-success-icon { font-size: 3rem; margin-bottom: 1rem; }
+    .stripe-success h4 { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--acid-green); margin-bottom: 0.5rem; }
+    .stripe-success p { color: var(--muted); font-size: 0.875rem; line-height: 1.7; }
+    .stripe-note {
+      margin-top: 1.25rem; padding: 0.75rem 1rem;
+      background: rgba(0,207,255,0.06); border: 1px solid rgba(0,207,255,0.15);
+      font-size: 0.78rem; color: var(--muted); line-height: 1.6;
+    }
+    .stripe-note a { color: var(--electric-blue); }
+
+    /* ── BLOG ── */
+    .blog-bg { background: var(--deep); }
+    .blog-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+    }
+    @media (max-width: 760px) { .blog-grid { grid-template-columns: 1fr; } }
+    .blog-card {
+      background: var(--surface); border: 1px solid rgba(255,255,255,0.06);
+      display: flex; flex-direction: column;
+      transition: transform 0.3s, border-color 0.3s;
+      cursor: pointer;
+    }
+    .blog-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.14); }
+    .blog-card-thumb {
+      width: 100%; aspect-ratio: 16/9;
+      display: flex; align-items: center; justify-content: center;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em;
+      position: relative; overflow: hidden;
+    }
+    .blog-card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .blog-tag {
+      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .blog-card h3 {
+      font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.05em;
+      line-height: 1.2; margin-bottom: 0.75rem;
+    }
+    .blog-card p { color: var(--muted); font-size: 0.85rem; line-height: 1.7; flex: 1; }
+    .blog-card-meta {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-top: 1.25rem; padding-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.75rem; color: var(--muted);
+    }
+    .blog-read-more { color: var(--electric-blue); font-size: 0.8rem; letter-spacing: 0.05em; }
+
+    /* Blog post modal */
+    .blog-modal-body h2 {
+      font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 0.05em;
+      margin-bottom: 0.5rem; color: var(--text);
+    }
+    .blog-modal-body .blog-meta-top {
+      font-size: 0.75rem; color: var(--muted); margin-bottom: 1.5rem;
+    }
+    .blog-modal-body p { margin-bottom: 1rem; color: var(--muted); font-size: 0.9rem; line-height: 1.85; }
+    .blog-modal-body h4 { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: 0.06em; color: var(--text); margin: 1.5rem 0 0.5rem; }
+    .blog-modal-body ul { padding-left: 1.25rem; margin-bottom: 1rem; color: var(--muted); font-size: 0.875rem; line-height: 1.8; }
+
+    /* ── EMAIL SIGNUP ── */
+    .email-signup-bg {
+      background: linear-gradient(135deg, #0e0220 0%, #08060e 50%, #000d18 100%);
+      border-top: 1px solid rgba(255,45,120,0.15);
+      border-bottom: 1px solid rgba(0,207,255,0.1);
+    }
+    .email-signup-inner {
+      max-width: 620px; margin: 0 auto; text-align: center; padding: 5rem 2rem;
+    }
+    .email-signup-inner .section-label { justify-content: center; display: block; }
+    .email-signup-inner h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: 0.05em; line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .email-signup-inner p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem; }
+    .email-signup-row {
+      display: flex; gap: 0; max-width: 460px; margin: 0 auto;
+    }
+    .email-signup-input {
+      flex: 1; padding: 0.9rem 1.25rem;
+      background: rgba(255,255,255,0.05);
+      border: 1.5px solid rgba(255,255,255,0.12); border-right: none;
+      color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.95rem;
+      outline: none; transition: border-color 0.2s;
+    }
+    .email-signup-input:focus { border-color: var(--hot-pink); }
+    .email-signup-btn {
+      padding: 0.9rem 1.5rem; background: var(--hot-pink); color: #fff;
+      border: none; cursor: pointer; font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem; font-weight: 500; white-space: nowrap;
+      box-shadow: 0 0 16px rgba(255,45,120,0.4);
+      transition: box-shadow 0.2s;
+    }
+    .email-signup-btn:hover { box-shadow: 0 0 28px rgba(255,45,120,0.65); }
+    .email-signup-small { font-size: 0.72rem; color: var(--muted); margin-top: 0.9rem; }
+    .email-signup-small a { color: var(--electric-blue); cursor: pointer; }
+    .email-success-msg {
+      display: none; color: var(--acid-green);
+      font-size: 0.95rem; margin-top: 1rem;
+      text-shadow: 0 0 8px rgba(57,255,20,0.4);
+    }
+    .email-perks {
+      display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .email-perk { font-size: 0.8rem; color: var(--muted); display: flex; align-items: center; gap: 0.4rem; }
+
+    .pay-method-tabs {
+      display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;
+    }
+    .pay-tab {
+      flex: 1; padding: 0.6rem 0.5rem; min-width: 80px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--muted); cursor: pointer; font-size: 0.78rem;
+      font-family: 'DM Sans', sans-serif; text-align: center;
+      transition: all 0.2s;
+    }
+    .pay-tab.active {
+      border-color: var(--hot-pink); color: var(--hot-pink);
+      background: rgba(255,45,120,0.08);
+    }
+    .pay-tab:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
+    .pay-card-icons { display: flex; gap: 0.4rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .pay-card-icon {
+      padding: 0.2rem 0.5rem; border: 1px solid rgba(255,255,255,0.12);
+      font-size: 0.65rem; letter-spacing: 0.08em; color: var(--muted);
+      font-weight: 600;
+    }
+    .paypal-info-box {
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+      padding: 1.25rem; text-align: center; margin-bottom: 0.5rem;
+      font-size: 0.875rem; color: var(--text);
+    }
+
+    /* ── COOKIE BANNER ── */
+    .cookie-banner {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 500;
+      background: #0e0b1a;
+      border-top: 1px solid rgba(255,45,120,0.25);
+      padding: 1.25rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+      box-shadow: 0 -8px 40px rgba(0,0,0,0.5);
+    }
+    .cookie-banner.visible { transform: translateY(0); }
+    .cookie-text { font-size: 0.875rem; color: var(--muted); max-width: 640px; line-height: 1.6; }
+    .cookie-text a { color: var(--electric-blue); cursor: pointer; text-decoration: underline; }
+    .cookie-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .cookie-btn-accept {
+      padding: 0.6rem 1.4rem; background: var(--hot-pink); color: #fff;
+      border: none; cursor: pointer; font-size: 0.875rem; font-family: 'DM Sans', sans-serif;
+      box-shadow: 0 0 12px rgba(255,45,120,0.4); transition: box-shadow 0.2s;
+    }
+    .cookie-btn-accept:hover { box-shadow: 0 0 22px rgba(255,45,120,0.6); }
+    .cookie-btn-decline {
+      padding: 0.6rem 1.4rem; background: transparent; color: var(--muted);
+      border: 1px solid rgba(255,255,255,0.1); cursor: pointer;
+      font-size: 0.875rem; font-family: 'DM Sans', sans-serif; transition: color 0.2s, border-color 0.2s;
+    }
+    .cookie-btn-decline:hover { color: var(--text); border-color: rgba(255,255,255,0.25); }
+
+    /* ── MODALS ── */
+    .modal-overlay {
+      position: fixed; inset: 0; z-index: 600;
+      background: rgba(8,6,14,0.88);
+      backdrop-filter: blur(6px);
+      display: flex; align-items: center; justify-content: center;
+      padding: 1.5rem;
+      opacity: 0; pointer-events: none; transition: opacity 0.3s;
+    }
+    .modal-overlay.open { opacity: 1; pointer-events: all; }
+    .modal {
+      background: #0e0b1a;
+      border: 1px solid rgba(255,255,255,0.1);
+      max-width: 680px; width: 100%;
+      max-height: 82vh; display: flex; flex-direction: column;
+      transform: translateY(20px); transition: transform 0.3s;
+    }
+    .modal-overlay.open .modal { transform: translateY(0); }
+    .modal-header {
+      padding: 1.5rem 2rem; border-bottom: 1px solid rgba(255,255,255,0.07);
+      display: flex; align-items: center; justify-content: space-between; flex-shrink: 0;
+    }
+    .modal-header h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.06em; }
+    .modal-close {
+      background: none; border: none; color: var(--muted); font-size: 1.5rem;
+      cursor: pointer; transition: color 0.2s; line-height: 1;
+    }
+    .modal-close:hover { color: var(--text); }
+    .modal-body {
+      padding: 1.75rem 2rem; overflow-y: auto; flex: 1;
+      font-size: 0.875rem; color: var(--muted); line-height: 1.85;
+    }
+    .modal-body h4 {
+      font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 0.06em;
+      color: var(--text); margin: 1.5rem 0 0.5rem;
+    }
+    .modal-body h4:first-child { margin-top: 0; }
+    .modal-body p { margin-bottom: 0.75rem; }
+    .modal-body ul { padding-left: 1.25rem; margin-bottom: 0.75rem; }
+    .modal-body ul li { margin-bottom: 0.4rem; }
+    .modal-footer {
+      padding: 1.25rem 2rem; border-top: 1px solid rgba(255,255,255,0.07);
+      flex-shrink: 0; display: flex; gap: 0.75rem; justify-content: flex-end;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow:
+          0 0 5px #fff,
+          0 0 10px var(--acid-green),
+          0 0 25px var(--acid-green),
+          0 0 50px var(--acid-green),
+          0 0 100px rgba(57,255,20,0.4);
+      }
+      20%, 24%, 55% {
+        text-shadow: none;
+        color: rgba(57,255,20,0.3);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">GP Light Sign</div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#designer">Design Studio</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#payment">Pay Deposit</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="hero-tag">✦ Handcrafted Custom Neon Signs</p>
+    <h1>
+      <span class="pink">LIGHT UP</span><br>
+      <span class="blue">YOUR WORLD</span>
+    </h1>
+    <p class="hero-sub">Bespoke neon signs for businesses, events, and homes. Designed to glow, built to last, impossible to ignore.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Order Your Sign</a>
+      <a href="#services" class="btn-ghost">See What We Do</a>
+    </div>
+    <div class="sign-demo">
+      <span class="neon-text">OPEN 24 HOURS</span>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num">500+</div>
+      <div class="stat-label">Signs Delivered</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">12</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">48H</div>
+      <div class="stat-label">Design Turnaround</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Custom Made</div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <p class="section-label">What We Offer</p>
+    <h2 class="section-title">Signs for Every<br>Space & Story</h2>
+    <div class="cards">
+      <div class="card" style="--card-accent: var(--hot-pink);">
+        <div class="card-icon">🏪</div>
+        <h3>Business Signage</h3>
+        <p>Make your storefront unforgettable. Logo signs, open signs, window displays — crafted to match your brand perfectly.</p>
+      </div>
+      <div class="card" style="--card-accent: var(--electric-blue);">
+        <div class="card-icon">🎉</div>
+        <h3>Events & Weddings</h3>
+        <p>The perfect backdrop for any celebration. Custom quotes, names, and designs that photograph beautifully and create lasting memories.</p>
+      </div>
+      <div class="card" style="--card-accent: var(--acid-green);">
+        <div class="card-icon">🏠</div>
+        <h3>Home Décor</h3>
+        <p>Turn any room into a statement. Gaming dens, living rooms, bars — your words and designs, glowing on your wall.</p>
+      </div>
+      <div class="card" style="--card-accent: var(--hot-pink);">
+        <div class="card-icon">🎨</div>
+        <h3>Fully Custom</h3>
+        <p>Got a wild idea? We love those. Share your vision and our designers will make it glow — any shape, any color, any size.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <div class="testi-bg">
+    <section class="section" id="testimonials">
+      <p class="section-label">Happy Customers</p>
+      <h2 class="section-title">Don't Just Take<br>Our Word for It</h2>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"Ordered a custom sign for our bar opening and it was the most photographed thing all night. The quality is incredible — glows so beautifully even in daylight."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:rgba(255,45,120,0.2);color:var(--hot-pink);">JM</div>
+            <div>
+              <div class="testi-name">Jamie M.</div>
+              <div class="testi-role">Bar Owner, Manchester</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"Got our wedding names in neon — every single guest stopped to take a photo with it. Now it hangs in our living room and we love it every day."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:rgba(0,207,255,0.2);color:var(--electric-blue);">SR</div>
+            <div>
+              <div class="testi-name">Sophie & Ryan</div>
+              <div class="testi-role">Wedding, June 2025</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"Crazy fast turnaround — design proof in 24 hours and sign delivered within a week. It transformed our studio. Clients always comment on it."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:rgba(57,255,20,0.15);color:var(--acid-green);">KL</div>
+            <div>
+              <div class="testi-name">Kira L.</div>
+              <div class="testi-role">Photography Studio Owner</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"Second order with GP Light Sign. The team went above and beyond to match our exact brand colors. Looks absolutely stunning in the shop window."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:rgba(191,95,255,0.2);color:#bf5fff;">DP</div>
+            <div>
+              <div class="testi-name">Dan P.</div>
+              <div class="testi-role">Retail Store, London</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"Bought a 'Game Over' sign for my gaming room. The glow is insane and it's been running non-stop for a year with zero issues. Worth every penny."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:rgba(255,149,0,0.2);color:#ff9500;">TW</div>
+            <div>
+              <div class="testi-name">Tom W.</div>
+              <div class="testi-role">Home Décor Customer</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"The online design tool made it so easy to visualise exactly what I wanted. What arrived was even better than the mockup. Absolutely flawless."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:rgba(255,236,61,0.15);color:#ffec3d;">AL</div>
+            <div>
+              <div class="testi-name">Aisha L.</div>
+              <div class="testi-role">Event Planner</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- GALLERY -->
+  <div class="gallery-bg">
+    <section class="section" id="gallery">
+      <p class="section-label">Inspiration Gallery</p>
+      <h2 class="section-title">Signs We've<br>Made Before</h2>
+      <div class="gallery-grid">
+
+        <!-- 1 — wide feature -->
+        <div class="gallery-item" style="background:#08020f;">
+          <div class="gallery-neon" style="font-size:clamp(2.5rem,7vw,5.5rem);color:#ff2d78;text-shadow:0 0 8px #fff,0 0 20px #ff2d78,0 0 50px #ff2d78,0 0 100px rgba(255,45,120,0.5);">
+            GOOD VIBES ONLY
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-tag">Home Décor</div>
+            <div class="gallery-overlay-title">Good Vibes Only</div>
+            <button class="gallery-use-btn" onclick="loadExample('GOOD VIBES ONLY','#ff2d78','255,45,120',&quot;'Bebas Neue', sans-serif&quot;,'#08020f')">Use this style →</button>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="gallery-item" style="background:#000d18;">
+          <div class="gallery-neon" style="font-size:clamp(1.5rem,3.5vw,3rem);color:#00cfff;text-shadow:0 0 8px #fff,0 0 20px #00cfff,0 0 50px #00cfff,0 0 100px rgba(0,207,255,0.4);">
+            OPEN<br>24/7
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-tag">Business</div>
+            <div class="gallery-overlay-title">Open 24/7</div>
+            <button class="gallery-use-btn" onclick="loadExample('OPEN 24/7','#00cfff','0,207,255',&quot;'Bebas Neue', sans-serif&quot;,'#000d18')">Use this style →</button>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="gallery-item" style="background:#020f02;">
+          <div class="gallery-neon" style="font-size:clamp(1.3rem,3vw,2.5rem);color:#39ff14;font-family:Georgia,serif;text-shadow:0 0 8px #fff,0 0 20px #39ff14,0 0 50px #39ff14,0 0 100px rgba(57,255,20,0.4);">
+            Forever &amp; Always
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-tag">Wedding</div>
+            <div class="gallery-overlay-title">Forever &amp; Always</div>
+            <button class="gallery-use-btn" onclick="loadExample('Forever & Always','#39ff14','57,255,20','Georgia, serif','#020f02')">Use this style →</button>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="gallery-item" style="background:#100208;">
+          <div class="gallery-neon" style="font-size:clamp(1.5rem,3.5vw,3rem);color:#bf5fff;text-shadow:0 0 8px #fff,0 0 20px #bf5fff,0 0 50px #bf5fff,0 0 100px rgba(191,95,255,0.4);">
+            DREAM<br>BIG
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-tag">Home Décor</div>
+            <div class="gallery-overlay-title">Dream Big</div>
+            <button class="gallery-use-btn" onclick="loadExample('DREAM BIG','#bf5fff','191,95,255',&quot;'Bebas Neue', sans-serif&quot;,'#100208')">Use this style →</button>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="gallery-item" style="background:#0f0800;">
+          <div class="gallery-neon" style="font-size:clamp(1.3rem,3vw,2.4rem);color:#ff9500;font-family:'Courier New',monospace;text-shadow:0 0 8px #fff,0 0 20px #ff9500,0 0 50px #ff9500,0 0 100px rgba(255,149,0,0.4);">
+            EAT · DRINK<br>BE MERRY
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-tag">Restaurant</div>
+            <div class="gallery-overlay-title">Eat · Drink · Be Merry</div>
+            <button class="gallery-use-btn" onclick="loadExample('EAT · DRINK · BE MERRY','#ff9500','255,149,0',&quot;'Courier New', monospace&quot;,'#0f0800')">Use this style →</button>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="gallery-item" style="background:#080808;">
+          <div class="gallery-neon" style="font-size:clamp(1.5rem,3.5vw,3rem);color:#ffec3d;text-shadow:0 0 8px #fff,0 0 20px #ffec3d,0 0 50px #ffec3d,0 0 100px rgba(255,236,61,0.4);">
+            BAR<br>&amp; GRILL
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-tag">Business</div>
+            <div class="gallery-overlay-title">Bar &amp; Grill</div>
+            <button class="gallery-use-btn" onclick="loadExample('BAR & GRILL','#ffec3d','255,236,61',&quot;'Bebas Neue', sans-serif&quot;,'#080808')">Use this style →</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- DESIGN STUDIO -->
+  <div class="designer-bg">
+    <section class="section" id="designer">
+      <p class="section-label">Design Studio</p>
+      <h2 class="section-title">Build Your Sign<br>Right Here</h2>
+      <div class="designer-wrap">
+
+        <!-- Controls -->
+        <div class="controls-panel">
+
+          <div class="control-group">
+            <label class="control-label">Your Text</label>
+            <input class="text-input" type="text" id="signText" maxlength="40" placeholder="Type something..." value="YOUR NAME" oninput="updatePreview()" />
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Neon Color</label>
+            <div class="color-swatches" id="colorSwatches">
+              <div class="swatch active" data-color="#ff2d78" data-shadow="255,45,120" style="background:#ff2d78;" onclick="setColor(this)"></div>
+              <div class="swatch" data-color="#00cfff" data-shadow="0,207,255" style="background:#00cfff;" onclick="setColor(this)"></div>
+              <div class="swatch" data-color="#39ff14" data-shadow="57,255,20" style="background:#39ff14;" onclick="setColor(this)"></div>
+              <div class="swatch" data-color="#ff9500" data-shadow="255,149,0" style="background:#ff9500;" onclick="setColor(this)"></div>
+              <div class="swatch" data-color="#bf5fff" data-shadow="191,95,255" style="background:#bf5fff;" onclick="setColor(this)"></div>
+              <div class="swatch" data-color="#ffffff" data-shadow="255,255,255" style="background:#ffffff;" onclick="setColor(this)"></div>
+              <div class="swatch" data-color="#ffec3d" data-shadow="255,236,61" style="background:#ffec3d;" onclick="setColor(this)"></div>
+              <div class="swatch" data-color="#ff6b35" data-shadow="255,107,53" style="background:#ff6b35;" onclick="setColor(this)"></div>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Font Style</label>
+            <div class="font-options">
+              <button class="font-btn active" data-font="'Bebas Neue', sans-serif" onclick="setFont(this)">BOLD BLOCK</button>
+              <button class="font-btn" data-font="'Courier New', monospace" onclick="setFont(this)">MONO TYPE</button>
+              <button class="font-btn" data-font="Georgia, serif" onclick="setFont(this)">Classic Serif</button>
+              <button class="font-btn" data-font="Impact, sans-serif" onclick="setFont(this)">IMPACT</button>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Sign Size — <span id="sizeVal">Medium</span></label>
+            <input class="size-slider" type="range" min="1" max="3" step="1" value="2" id="sizeSlider" oninput="updateSize(this.value)" />
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Background</label>
+            <div class="bg-options">
+              <button class="bg-btn active" data-bg="#08060e" onclick="setBg(this)">Dark</button>
+              <button class="bg-btn" data-bg="#1a0a00" onclick="setBg(this)">Warm Dark</button>
+              <button class="bg-btn" data-bg="#ffffff" onclick="setBg(this)">White</button>
+              <button class="bg-btn" data-bg="#0d1117" onclick="setBg(this)">Slate</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Preview -->
+        <div class="preview-panel">
+          <div class="preview-box" id="previewBox" style="background:#08060e;">
+            <div class="preview-sign" id="previewSign">YOUR NAME</div>
+          </div>
+          <p class="preview-label">✦ Live preview — this is how your sign will look</p>
+          <div class="order-btn-wrap">
+            <a href="#contact" class="btn-primary" onclick="prefillOrder()">Order This Design →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- PROCESS -->
+  <div class="process-bg">
+    <section class="section" id="process">
+      <p class="section-label">How It Works</p>
+      <h2 class="section-title">From Idea to<br>Glowing Reality</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h4>Tell Us Your Vision</h4>
+          <p>Share your idea — a quote, logo, shape, or rough sketch. The weirder the better.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h4>Design Proof</h4>
+          <p>We send a digital mockup within 48 hours. Tweak it until it's exactly right.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h4>Handcrafted</h4>
+          <p>Your sign is built by skilled artisans using premium LED neon flex — vibrant, energy-efficient, and long-lasting.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h4>Delivered & Glowing</h4>
+          <p>Packaged safely and shipped to your door. Plug in and light up your space.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PRICE ESTIMATOR -->
+  <div class="price-bg">
+    <section class="section" id="pricing">
+      <p class="section-label">Pricing</p>
+      <h2 class="section-title">Instant Price<br>Estimate</h2>
+      <div class="price-wrap">
+        <div class="price-options">
+          <div class="price-row">
+            <div class="price-row-label">Sign Size</div>
+            <div class="price-btns">
+              <button class="price-btn" data-type="size" data-val="50" onclick="updatePrice(this)">Small (up to 40cm)</button>
+              <button class="price-btn active" data-type="size" data-val="100" onclick="updatePrice(this)">Medium (40–80cm)</button>
+              <button class="price-btn" data-type="size" data-val="180" onclick="updatePrice(this)">Large (80–120cm)</button>
+              <button class="price-btn" data-type="size" data-val="300" onclick="updatePrice(this)">XL (120cm+)</button>
+            </div>
+          </div>
+          <div class="price-row">
+            <div class="price-row-label">Font Complexity</div>
+            <div class="price-btns">
+              <button class="price-btn active" data-type="font" data-val="0" onclick="updatePrice(this)">Block / Simple</button>
+              <button class="price-btn" data-type="font" data-val="40" onclick="updatePrice(this)">Script / Cursive</button>
+              <button class="price-btn" data-type="font" data-val="80" onclick="updatePrice(this)">Custom Logo Shape</button>
+            </div>
+          </div>
+          <div class="price-row">
+            <div class="price-row-label">Backing Board</div>
+            <div class="price-btns">
+              <button class="price-btn active" data-type="board" data-val="0" onclick="updatePrice(this)">No Board (wire only)</button>
+              <button class="price-btn" data-type="board" data-val="30" onclick="updatePrice(this)">Clear Acrylic</button>
+              <button class="price-btn" data-type="board" data-val="50" onclick="updatePrice(this)">Black / White Acrylic</button>
+              <button class="price-btn" data-type="board" data-val="80" onclick="updatePrice(this)">Custom Shape Board</button>
+            </div>
+          </div>
+          <div class="price-row">
+            <div class="price-row-label">Delivery</div>
+            <div class="price-btns">
+              <button class="price-btn active" data-type="delivery" data-val="0" onclick="updatePrice(this)">Standard (7–10 days)</button>
+              <button class="price-btn" data-type="delivery" data-val="35" onclick="updatePrice(this)">Express (3–5 days)</button>
+            </div>
+          </div>
+        </div>
+        <div class="price-result">
+          <div class="price-from">Estimated price from</div>
+          <div class="price-amount" id="priceAmount">$100</div>
+          <div class="price-note">Final price confirmed in your free quote. No hidden fees, no surprises.</div>
+          <a href="#contact" class="btn-primary price-cta">Get My Exact Quote →</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-bg">
+    <section class="section" id="faq">
+      <p class="section-label">FAQ</p>
+      <h2 class="section-title">Questions?<br>We've Got Answers</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How long does it take to make my sign? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Design proofs are sent within 48 hours of your order. Once approved, production takes 5–7 business days. Express options are available for 3–5 day turnaround. We'll confirm exact timelines in your quote.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What size signs can you make? <span class="faq-icon">+</span></button>
+          <div class="faq-a">We make signs from as small as 20cm up to 200cm+ wide. For very large or complex installations, contact us directly and we'll work out the best solution for your space.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Are your signs safe to use indoors and outdoors? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Our LED neon flex is low-voltage, low-heat and safe for indoor use. We also offer IP65-rated weatherproof options for outdoor and semi-outdoor installations (covered patios, storefronts etc). Just let us know when ordering.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What's the warranty on my sign? <span class="faq-icon">+</span></button>
+          <div class="faq-a">All signs come with a 24-month warranty covering manufacturing defects. Our LED neon has an expected lifespan of 50,000+ hours. If anything goes wrong, we'll repair or replace it — no quibble.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Can I return or exchange my sign? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Because every sign is made to order, we can't accept returns for change of mind. However, if your sign arrives damaged or has a manufacturing defect, we'll replace it free of charge. We always send a proof for your approval before production to avoid any issues.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How do I hang and care for my sign? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Every sign comes with a hanging kit and clear instructions. For cleaning, simply wipe with a soft dry cloth — no liquids. Signs can be switched on and off freely; there's no warm-up time needed and they're cool to touch.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Do you ship internationally? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Yes! We ship worldwide. Shipping costs and times vary by destination and are calculated at checkout. All signs are securely double-boxed with custom foam inserts for safe transit.</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- QUOTE FORM -->
+  <div style="background:var(--deep);">
+    <section class="section" id="contact">
+      <p class="section-label">Get in Touch</p>
+      <h2 class="section-title">Get Your<br><span style="color:var(--hot-pink);text-shadow:0 0 15px var(--hot-pink);">Free Quote</span></h2>
+      <div class="form-wrap">
+        <div class="form-grid" id="quoteForm">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input class="form-input" type="text" id="fname" placeholder="Jane" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input class="form-input" type="text" id="lname" placeholder="Smith" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input class="form-input" type="email" id="femail" placeholder="jane@example.com" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone (optional)</label>
+            <input class="form-input" type="tel" id="fphone" placeholder="+44 7700 900000" />
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Sign Text / Description</label>
+            <input class="form-input" type="text" id="fsigntext" placeholder="e.g. 'GOOD VIBES ONLY' or describe your logo" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Approximate Size</label>
+            <select class="form-select" id="fsize">
+              <option value="">Select size...</option>
+              <option>Small (up to 40cm)</option>
+              <option>Medium (40–80cm)</option>
+              <option>Large (80–120cm)</option>
+              <option>XL (120cm+)</option>
+              <option>Not sure — advise me</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Sign Purpose</label>
+            <select class="form-select" id="fpurpose">
+              <option value="">Select purpose...</option>
+              <option>Business / Storefront</option>
+              <option>Wedding / Event</option>
+              <option>Home Décor</option>
+              <option>Gift</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Any Other Details</label>
+            <textarea class="form-textarea" id="fdetails" placeholder="Tell us about colors, fonts, backing boards, or anything else..."></textarea>
+          </div>
+        </div>
+        <button class="form-submit" onclick="submitQuote()">Send My Quote Request →</button>
+        <div class="form-success" id="formSuccess">✦ &nbsp;Thanks! We'll get back to you with a quote within 24 hours.</div>
+      </div>
+    </section>
+  </div>
+
+  <!-- STRIPE DEPOSIT PAYMENT -->
+  <div class="payment-bg">
+    <section class="section" id="payment">
+      <p class="section-label">Pay Your Deposit</p>
+      <h2 class="section-title">Secure Your Order<br>with a Deposit</h2>
+      <div class="payment-wrap">
+
+        <div class="payment-info">
+          <h3>How the deposit works</h3>
+          <p>Once we've agreed your quote, pay a 50% deposit to lock in your order and get into our production queue. We'll send your design proof within 48 hours of receiving payment.</p>
+          <p>The remaining 50% balance is due once you've approved your proof and before we dispatch your sign.</p>
+          <ul class="payment-features">
+            <li>No hidden fees — the price in your quote is the price you pay</li>
+            <li>Design proof sent within 48 hours of deposit</li>
+            <li>Full refund if you cancel before proof approval</li>
+            <li>Secure payment processed by Stripe</li>
+            <li>Visa, Mastercard, Amex, Apple Pay & Google Pay accepted</li>
+          </ul>
+          <div class="payment-badges">
+            <div class="payment-badge">🔒 SSL Secured</div>
+            <div class="payment-badge">💳 Stripe</div>
+            <div class="payment-badge">🛡 PCI Compliant</div>
+            <div class="payment-badge">✦ 24-Month Warranty</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="stripe-form" id="stripeFormWrap">
+            <div class="stripe-form-title">Pay Deposit</div>
+            <div class="stripe-form-sub">Secure checkout powered by Stripe</div>
+
+            <div class="deposit-amount-box">
+              <div>
+                <div class="deposit-label">Deposit Amount (50%)</div>
+                <div style="font-size:0.75rem;color:var(--muted);margin-top:0.2rem;">You'll enter the amount on the next page</div>
+              </div>
+              <div class="deposit-value">50%</div>
+            </div>
+
+            <div class="stripe-field-group">
+              <label class="stripe-field-label">Your Name</label>
+              <input class="stripe-field-input" type="text" id="payerName" placeholder="Jane Smith" />
+            </div>
+
+            <div class="stripe-field-group">
+              <label class="stripe-field-label">Email Address</label>
+              <input class="stripe-field-input" type="email" id="payerEmail" placeholder="jane@example.com" />
+            </div>
+
+            <div class="stripe-field-group">
+              <label class="stripe-field-label">Order Reference (from your quote)</label>
+              <input class="stripe-field-input" type="text" id="orderRef" placeholder="e.g. GPL-2026-001" />
+            </div>
+
+            <div style="margin:1.25rem 0 0.75rem;">
+              <div class="stripe-field-label" style="margin-bottom:0.75rem;">Accepted Payment Methods</div>
+              <div class="pay-card-icons" style="gap:0.6rem;">
+                <span class="pay-card-icon" style="padding:0.3rem 0.7rem;">VISA</span>
+                <span class="pay-card-icon" style="padding:0.3rem 0.7rem;">MC</span>
+                <span class="pay-card-icon" style="padding:0.3rem 0.7rem;">AMEX</span>
+                <span class="pay-card-icon" style="padding:0.3rem 0.7rem;"> Pay</span>
+                <span class="pay-card-icon" style="padding:0.3rem 0.7rem;">G Pay</span>
+                <span class="pay-card-icon" style="padding:0.3rem 0.7rem;">🅿 PayPal</span>
+              </div>
+            </div>
+
+            <button class="stripe-pay-btn" id="stripePayBtn" onclick="handleStripePay()" style="margin-top:1rem;">
+              <span>🔒</span> Pay Deposit Securely →
+            </button>
+
+            <div class="stripe-secure" style="margin-top:0.75rem;">
+              <span>🔐 Payments secured by Stripe — we never store your card details</span>
+            </div>
+            <div class="stripe-powered">Powered by Stripe</div>
+          </div>
+
+          <!-- Success state -->
+          <div class="stripe-success" id="stripeSuccess">
+            <div class="stripe-success-icon">✅</div>
+            <h4>Redirecting to Payment...</h4>
+            <p>You'll be taken to our secure Stripe checkout page. Complete your payment there and we'll send your design proof within 48 hours.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- BLOG -->
+  <div class="blog-bg">
+    <section class="section" id="blog">
+      <p class="section-label">From the Blog</p>
+      <h2 class="section-title">Neon Tips, Ideas<br>&amp; Inspiration</h2>
+      <div class="blog-grid">
+
+        <div class="blog-card" onclick="openBlogPost(0)">
+          <div class="blog-card-thumb" style="background:#08020f;">
+            <span style="color:#ff2d78;text-shadow:0 0 10px #ff2d78,0 0 30px #ff2d78;">HOW TO</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-tag" style="color:var(--hot-pink);">Buying Guide</div>
+            <h3>LED vs Traditional Glass Neon: Which Is Right for You?</h3>
+            <p>We break down the real differences between classic glass neon tubes and modern LED neon flex — cost, safety, brightness, and lifespan.</p>
+            <div class="blog-card-meta">
+              <span>8 min read · May 2026</span>
+              <span class="blog-read-more">Read →</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="blog-card" onclick="openBlogPost(1)">
+          <div class="blog-card-thumb" style="background:#000d18;">
+            <span style="color:#00cfff;text-shadow:0 0 10px #00cfff,0 0 30px #00cfff;">IDEAS</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-tag" style="color:var(--electric-blue);">Inspiration</div>
+            <h3>10 Neon Sign Ideas That Will Transform Your Home Bar</h3>
+            <p>From classic cocktail quotes to sports team logos — our favourite ideas for lighting up your home bar and making it the envy of the street.</p>
+            <div class="blog-card-meta">
+              <span>5 min read · Apr 2026</span>
+              <span class="blog-read-more">Read →</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="blog-card" onclick="openBlogPost(2)">
+          <div class="blog-card-thumb" style="background:#020f02;">
+            <span style="color:#39ff14;text-shadow:0 0 10px #39ff14,0 0 30px #39ff14;">WEDDING</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-tag" style="color:var(--acid-green);">Events</div>
+            <h3>Why Every Wedding Needs a Neon Sign (And How to Pick Yours)</h3>
+            <p>Neon signs are one of the most-photographed wedding elements of the decade. Here's how to choose the perfect sign for your big day.</p>
+            <div class="blog-card-meta">
+              <span>6 min read · Mar 2026</span>
+              <span class="blog-read-more">Read →</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- EMAIL SIGNUP -->
+  <div class="email-signup-bg">
+    <div class="email-signup-inner">
+      <p class="section-label">Stay in the Loop</p>
+      <h2>Get Exclusive Deals<br>&amp; <span style="color:var(--hot-pink);text-shadow:0 0 12px var(--hot-pink);">Neon Inspo</span></h2>
+      <p>Join 2,000+ neon lovers. Get early access to new designs, seasonal offers, and sign inspiration delivered straight to your inbox. No spam — ever.</p>
+      <div class="email-signup-row">
+        <input class="email-signup-input" type="email" id="signupEmail" placeholder="your@email.com" />
+        <button class="email-signup-btn" onclick="handleEmailSignup()">Subscribe →</button>
+      </div>
+      <div class="email-success-msg" id="emailSuccessMsg">✦ You're in! Check your inbox for a welcome gift. 🎉</div>
+      <p class="email-signup-small">By subscribing you agree to our <a onclick="openModal('privacy')">Privacy Policy</a>. Unsubscribe anytime.</p>
+      <div class="email-perks">
+        <div class="email-perk">🎁 10% off your first order</div>
+        <div class="email-perk">✨ Monthly design inspiration</div>
+        <div class="email-perk">🔔 Early access to new collections</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOG POST MODAL -->
+  <div class="modal-overlay" id="blogModal">
+    <div class="modal" style="max-width:740px;">
+      <div class="modal-header">
+        <h3 id="blogModalTitle">Blog Post</h3>
+        <button class="modal-close" onclick="closeModal('blog')">✕</button>
+      </div>
+      <div class="modal-body blog-modal-body" id="blogModalBody"></div>
+      <div class="modal-footer">
+        <button class="cookie-btn-decline" onclick="closeModal('blog')">Close</button>
+        <a href="#contact" class="btn-primary" onclick="closeModal('blog')" style="padding:0.6rem 1.4rem;font-size:0.875rem;">Get a Quote →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="logo">GP Light Sign</div>
+        <p>Handcrafted custom neon signs for businesses, events & homes. Designed to glow, built to last.</p>
+        <div class="social-links">
+          <a class="social-link" href="https://instagram.com" target="_blank" title="Instagram">📸</a>
+          <a class="social-link" href="https://tiktok.com" target="_blank" title="TikTok">🎵</a>
+          <a class="social-link" href="https://facebook.com" target="_blank" title="Facebook">📘</a>
+          <a class="social-link" href="https://pinterest.com" target="_blank" title="Pinterest">📌</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#designer">Design Studio</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#payment">Pay Deposit</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Get a Quote</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:guerbyperalte02@icloud.com">guerbyperalte02@icloud.com</a></li>
+          <li><a href="https://wa.me/13376349009" target="_blank">WhatsApp Us</a></li>
+          <li><a href="#contact">Quote Request Form</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 GP Light Sign Neon. All rights reserved.</div>
+      <div>
+        <a href="#" onclick="openModal('privacy');return false;" style="color:var(--muted);text-decoration:none;margin-right:1.5rem;">Privacy Policy</a>
+        <a href="#" onclick="openModal('terms');return false;" style="color:var(--muted);text-decoration:none;">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a class="whatsapp-float" href="https://wa.me/13376349009" target="_blank" title="Chat on WhatsApp">
+    <span class="whatsapp-tooltip">Chat with us!</span>
+    💬
+  </a>
+  <!-- COOKIE BANNER -->
+  <div class="cookie-banner" id="cookieBanner">
+    <p class="cookie-text">
+      🍪 We use cookies to improve your experience and analyse site traffic. By clicking "Accept", you agree to our
+      <a onclick="openModal('privacy')">Privacy Policy</a> and use of cookies.
+    </p>
+    <div class="cookie-actions">
+      <button class="cookie-btn-decline" onclick="declineCookies()">Decline</button>
+      <button class="cookie-btn-accept" onclick="acceptCookies()">Accept All</button>
+    </div>
+  </div>
+
+  <!-- PRIVACY POLICY MODAL -->
+  <div class="modal-overlay" id="privacyModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Privacy Policy</h3>
+        <button class="modal-close" onclick="closeModal('privacy')">✕</button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Last updated: May 2026</strong></p>
+
+        <h4>1. Who We Are</h4>
+        <p>GP Light Sign ("we", "us", "our") is a custom neon sign business. When you use our website or submit a quote request, you trust us with your personal information. This policy explains what we collect, how we use it, and your rights.</p>
+        <p><strong>Contact:</strong> guerbyperalte02@icloud.com</p>
+
+        <h4>2. What We Collect</h4>
+        <ul>
+          <li><strong>Contact details</strong> — name, email address, phone number when you submit a quote request.</li>
+          <li><strong>Order information</strong> — sign specifications, preferences, and correspondence about your order.</li>
+          <li><strong>Usage data</strong> — pages visited, time on site, browser type (via cookies, only if you consent).</li>
+        </ul>
+
+        <h4>3. How We Use Your Data</h4>
+        <ul>
+          <li>To respond to your quote requests and process orders.</li>
+          <li>To send order updates and delivery notifications.</li>
+          <li>To improve our website and services (anonymised analytics only).</li>
+          <li>To contact you with relevant offers if you have opted in.</li>
+        </ul>
+
+        <h4>4. Cookies</h4>
+        <p>We use essential cookies to make the site work and, with your consent, analytics cookies to understand how visitors use the site. You can withdraw cookie consent at any time by clearing your browser cookies.</p>
+
+        <h4>5. Who We Share Data With</h4>
+        <p>We do not sell your personal data. We may share it with trusted service providers (e.g. email platform, payment processor) strictly to fulfil your order. All providers are GDPR-compliant.</p>
+
+        <h4>6. How Long We Keep It</h4>
+        <p>Quote enquiry data is kept for up to 2 years. Order records are kept for 7 years for legal/accounting purposes.</p>
+
+        <h4>7. Your Rights</h4>
+        <p>Under UK GDPR you have the right to access, correct, or delete your personal data. Email us at guerbyperalte02@icloud.com to exercise any of these rights. You also have the right to lodge a complaint with the ICO (ico.org.uk).</p>
+
+        <h4>8. Changes to This Policy</h4>
+        <p>We may update this policy from time to time. The "last updated" date at the top will always reflect the most recent version.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="cookie-btn-decline" onclick="closeModal('privacy')">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERMS & CONDITIONS MODAL -->
+  <div class="modal-overlay" id="termsModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Terms &amp; Conditions</h3>
+        <button class="modal-close" onclick="closeModal('terms')">✕</button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Last updated: May 2026</strong></p>
+
+        <h4>1. About These Terms</h4>
+        <p>These terms govern your use of the GP Light Sign website and any orders placed with us. By using our site or placing an order, you agree to these terms. Please read them carefully.</p>
+
+        <h4>2. Orders & Approval</h4>
+        <p>All signs are made to order. After your quote is accepted, we will send a digital design proof for your approval. Production begins only after you confirm the proof in writing (email is sufficient). You are responsible for checking all text and details carefully before approving.</p>
+
+        <h4>3. Payment</h4>
+        <p>A 50% deposit is required to begin production. The remaining balance is due before dispatch. We accept bank transfer, debit/credit card, and PayPal. Prices are in GBP and include VAT where applicable.</p>
+
+        <h4>4. Production & Delivery Times</h4>
+        <p>Standard production is 5–7 business days after proof approval. Express production (3–5 days) is available at additional cost. Delivery times are estimates and may vary. We are not liable for delays caused by couriers or customs.</p>
+
+        <h4>5. Returns & Cancellations</h4>
+        <ul>
+          <li>Custom signs cannot be returned or exchanged unless they are faulty or damaged.</li>
+          <li>Cancellations before proof approval: full refund of deposit.</li>
+          <li>Cancellations after proof approval: deposit is non-refundable as design work has commenced.</li>
+          <li>If your sign arrives damaged, contact us within 48 hours with photos and we will replace it free of charge.</li>
+        </ul>
+
+        <h4>6. Warranty</h4>
+        <p>All signs carry a 24-month warranty against manufacturing defects. This does not cover physical damage, water damage to non-weatherproof signs, or misuse. LED neon has an expected lifespan of 50,000+ hours under normal use.</p>
+
+        <h4>7. Intellectual Property</h4>
+        <p>By submitting a design, logo, or text, you confirm you have the right to use it. GP Light Sign accepts no liability for intellectual property infringement caused by customer-supplied content. We reserve the right to decline orders that infringe third-party rights.</p>
+
+        <h4>8. Limitation of Liability</h4>
+        <p>Our liability is limited to the value of your order. We are not liable for indirect or consequential losses. Nothing in these terms affects your statutory rights as a consumer under UK law.</p>
+
+        <h4>9. Governing Law</h4>
+        <p>These terms are governed by the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+
+        <h4>10. Contact</h4>
+        <p>Questions about these terms? Email us at guerbyperalte02@icloud.com — we're happy to help.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="cookie-btn-decline" onclick="closeModal('terms')">Close</button>
+      </div>
+    </div>
+  </div>
+    let currentColor = '#ff2d78';
+    let currentShadow = '255,45,120';
+    let currentFont = "'Bebas Neue', sans-serif";
+    const sizes = { 1: { fs: 'clamp(1.5rem,4vw,2.5rem)', label: 'Small' }, 2: { fs: 'clamp(2rem,6vw,4rem)', label: 'Medium' }, 3: { fs: 'clamp(2.8rem,8vw,6rem)', label: 'Large' } };
+
+    function updatePreview() {
+      const text = document.getElementById('signText').value || 'YOUR NAME';
+      const sign = document.getElementById('previewSign');
+      sign.textContent = text;
+    }
+
+    function applyGlow() {
+      const sign = document.getElementById('previewSign');
+      sign.style.color = currentColor;
+      sign.style.fontFamily = currentFont;
+      sign.style.textShadow = `
+        0 0 5px #fff,
+        0 0 12px ${currentColor},
+        0 0 30px ${currentColor},
+        0 0 60px rgba(${currentShadow},0.6),
+        0 0 100px rgba(${currentShadow},0.3)
+      `;
+    }
+
+    function setColor(el) {
+      document.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+      el.classList.add('active');
+      currentColor = el.dataset.color;
+      currentShadow = el.dataset.shadow;
+      applyGlow();
+    }
+
+    function setFont(el) {
+      document.querySelectorAll('.font-btn').forEach(b => b.classList.remove('active'));
+      el.classList.add('active');
+      currentFont = el.dataset.font;
+      applyGlow();
+    }
+
+    function updateSize(val) {
+      const sign = document.getElementById('previewSign');
+      sign.style.fontSize = sizes[val].fs;
+      document.getElementById('sizeVal').textContent = sizes[val].label;
+    }
+
+    function setBg(el) {
+      document.querySelectorAll('.bg-btn').forEach(b => b.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById('previewBox').style.background = el.dataset.bg;
+    }
+
+    function prefillOrder() {
+      const text = document.getElementById('signText').value || 'YOUR NAME';
+      const colorEl = document.querySelector('.swatch.active');
+      const colorName = colorEl ? colorEl.style.background : currentColor;
+      const fontEl = document.querySelector('.font-btn.active');
+      const fontName = fontEl ? fontEl.textContent : 'Bold Block';
+      const sizeEl = document.getElementById('sizeVal');
+      const sizeName = sizeEl ? sizeEl.textContent : 'Medium';
+      const subject = encodeURIComponent(`Neon Sign Order: "${text}"`);
+      const body = encodeURIComponent(`Hi, I'd like to order the following neon sign:\n\nText: ${text}\nColor: ${colorName}\nFont: ${fontName}\nSize: ${sizeName}\n\nPlease send me a quote!`);
+      const link = document.querySelector('.order-btn-wrap a');
+      link.href = `mailto:guerbyperalte02@icloud.com?subject=${subject}&body=${body}`;
+    }
+
+    function loadExample(text, color, shadow, font, bg) {
+      // Set text
+      document.getElementById('signText').value = text;
+      // Set color swatch
+      currentColor = color; currentShadow = shadow;
+      document.querySelectorAll('.swatch').forEach(s => {
+        s.classList.toggle('active', s.dataset.color === color);
+      });
+      // Set font
+      currentFont = font;
+      document.querySelectorAll('.font-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.font === font);
+      });
+      // Set bg
+      document.getElementById('previewBox').style.background = bg;
+      document.querySelectorAll('.bg-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.bg === bg);
+      });
+      updatePreview();
+      applyGlow();
+      // Scroll to designer
+      document.getElementById('designer').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Price estimator
+    const priceState = { size: 100, font: 0, board: 0, delivery: 0 };
+    function updatePrice(el) {
+      const type = el.dataset.type;
+      document.querySelectorAll(`.price-btn[data-type="${type}"]`).forEach(b => b.classList.remove('active'));
+      el.classList.add('active');
+      priceState[type] = parseInt(el.dataset.val);
+      const total = Object.values(priceState).reduce((a, b) => a + b, 0);
+      document.getElementById('priceAmount').textContent = `$${total}`;
+    }
+
+    // FAQ toggle
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // Quote form
+    function submitQuote() {
+      const fname = document.getElementById('fname').value.trim();
+      const femail = document.getElementById('femail').value.trim();
+      if (!fname || !femail) { alert('Please fill in at least your name and email.'); return; }
+      document.getElementById('quoteForm').style.opacity = '0.4';
+      document.querySelector('.form-submit').disabled = true;
+      document.getElementById('formSuccess').style.display = 'block';
+    }
+
+    // Payment method switcher
+    let currentPayMethod = 'card';
+    function switchPayMethod(method, el) {
+      document.querySelectorAll('.pay-tab').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+      ['card','paypal','apple','google'].forEach(m => {
+        const el = document.getElementById('method-' + m);
+        if (el) el.style.display = m === method ? 'block' : 'none';
+      });
+      currentPayMethod = method;
+      const labels = { card: '💳 Pay', paypal: '🅿 Pay with PayPal', apple: ' Pay with Apple Pay', google: 'G Pay with Google Pay' };
+      const amount = document.getElementById('payBtnAmount').textContent;
+      document.getElementById('stripePayBtn').innerHTML = `<span>🔒</span> ${labels[method]} <span id="payBtnAmount">${amount}</span>`;
+    }
+
+    // Stripe deposit
+    function updateDeposit(val) {
+      const amount = parseFloat(val) || 0;
+      document.getElementById('depositDisplay').textContent = `$${amount.toFixed(0)}`;
+      document.getElementById('payBtnAmount').textContent = `$${amount.toFixed(0)}`;
+    }
+    function handleStripePay() {
+      const name = document.getElementById('payerName').value.trim();
+      const email = document.getElementById('payerEmail').value.trim();
+      const amount = document.getElementById('depositInput').value;
+      if (!name || !email) { alert('Please enter your name and email address.'); return; }
+      if (!amount || parseFloat(amount) < 1) { alert('Please enter a valid deposit amount.'); return; }
+      const btn = document.getElementById('stripePayBtn');
+      btn.disabled = true;
+      btn.innerHTML = '<span>⏳</span> Processing...';
+      // Simulate Stripe processing (replace with real Stripe.js in production)
+      setTimeout(() => {
+        document.getElementById('stripeFormWrap').style.display = 'none';
+        document.getElementById('stripeSuccess').style.display = 'block';
+      }, 2000);
+    }
+
+    // Blog posts data
+    const blogPosts = [
+      {
+        title: "LED vs Traditional Glass Neon: Which Is Right for You?",
+        tag: "Buying Guide · 8 min read · May 2026",
+        content: `
+          <h4>The Short Answer</h4>
+          <p>For most customers — businesses, homes, and events — LED neon flex is the better choice. It's safer, cheaper to run, more durable, and easier to ship. Traditional glass neon has a unique aesthetic warmth, but comes with trade-offs that rarely make sense outside specialist applications.</p>
+          <h4>What Is Traditional Glass Neon?</h4>
+          <p>Classic neon signs use glass tubes filled with noble gases (neon, argon, krypton) that glow when electrified at high voltage. They've been around since the 1910s and have an unmistakable warm, slightly buzzing glow that many people love.</p>
+          <h4>What Is LED Neon Flex?</h4>
+          <p>LED neon flex is a flexible silicone tube containing LED strips. It mimics the look of glass neon very closely, but runs at low voltage, produces almost no heat, and is virtually unbreakable.</p>
+          <h4>How They Compare</h4>
+          <ul>
+            <li><strong>Cost:</strong> LED is 30–50% cheaper to produce and uses up to 80% less electricity.</li>
+            <li><strong>Safety:</strong> LED runs at 12–24V vs glass neon's 3,000–15,000V. No shatter risk.</li>
+            <li><strong>Lifespan:</strong> LED lasts 50,000+ hours. Glass neon typically 10,000–30,000 hours.</li>
+            <li><strong>Look:</strong> Glass has a slightly softer, warmer glow with subtle flicker. LED is brighter and more uniform.</li>
+            <li><strong>Outdoor use:</strong> LED flex is easily weatherproofed. Glass neon is fragile and expensive to repair.</li>
+          </ul>
+          <h4>Our Verdict</h4>
+          <p>All GP Light Sign signs are made with premium LED neon flex. We believe it offers the best combination of quality, safety, and value — and our customers agree. If you specifically want the vintage glass neon aesthetic, get in touch and we can discuss options.</p>
+        `
+      },
+      {
+        title: "10 Neon Sign Ideas That Will Transform Your Home Bar",
+        tag: "Inspiration · 5 min read · Apr 2026",
+        content: `
+          <h4>Why Home Bars Love Neon</h4>
+          <p>Neon signs are the fastest way to turn a spare room or corner into a proper bar experience. The glow creates instant atmosphere, they look incredible in photos, and they're a talking point every time guests visit.</p>
+          <h4>Our Top 10 Ideas</h4>
+          <ul>
+            <li><strong>1. The Classic "BAR" Sign</strong> — Simple, bold, timeless. Works in any colour.</li>
+            <li><strong>2. Your House Name or Surname</strong> — "The Johnsons' Bar" feels personal and special.</li>
+            <li><strong>3. A Cocktail Quote</strong> — "Shake It Off", "Shaken Not Stirred", "One More Won't Hurt".</li>
+            <li><strong>4. Beer Brand Logo (custom style)</strong> — Not a copy, but inspired by your favourite brewery.</li>
+            <li><strong>5. Sport Team Name</strong> — Perfect for match days. Light it up when the game's on.</li>
+            <li><strong>6. "Open 24 Hours"</strong> — A cheeky classic that never gets old.</li>
+            <li><strong>7. A Martini Glass Shape</strong> — Custom shapes add real personality.</li>
+            <li><strong>8. "Eat, Drink & Be Merry"</strong> — Warm and welcoming for entertaining.</li>
+            <li><strong>9. Coordinates of a Special Place</strong> — Where you met, got engaged, or your favourite bar.</li>
+            <li><strong>10. A Song Lyric or Movie Quote</strong> — Make it yours. Something that means something to you.</li>
+          </ul>
+          <h4>Colour Tips for Home Bars</h4>
+          <p>Warm colours (amber, orange, red) create a pub-like cosiness. Cool blues and whites feel more modern and cocktail-bar-ish. Green is great for a sports bar vibe. When in doubt, pink is universally loved.</p>
+          <p>Ready to design yours? Use our Design Studio above to see exactly how it'll look before you order.</p>
+        `
+      },
+      {
+        title: "Why Every Wedding Needs a Neon Sign (And How to Pick Yours)",
+        tag: "Events · 6 min read · Mar 2026",
+        content: `
+          <h4>The Most Photographed Wedding Accessory of the Decade</h4>
+          <p>Walk through any wedding Instagram feed and you'll spot neon. They create a natural photo backdrop, add a warm glow to evening receptions, and give guests something to interact with. They're also a keepsake you can hang at home afterwards.</p>
+          <h4>Where to Use Your Wedding Neon Sign</h4>
+          <ul>
+            <li><strong>Ceremony backdrop</strong> — Behind you as you say your vows.</li>
+            <li><strong>Reception photo wall</strong> — The centrepiece of your selfie station.</li>
+            <li><strong>Sweetheart table</strong> — Behind the bride and groom's table.</li>
+            <li><strong>Bar area</strong> — Doubles as décor and signage.</li>
+            <li><strong>Entrance or welcome area</strong> — Sets the tone immediately.</li>
+          </ul>
+          <h4>What to Put on Your Wedding Neon</h4>
+          <ul>
+            <li>Your names — "Sarah & James" or just initials.</li>
+            <li>Your wedding date — a beautiful keepsake.</li>
+            <li>A meaningful quote — "Forever & Always", "Better Together", "Happily Ever After".</li>
+            <li>Your new surname — "The Millers" for the table or door at home.</li>
+          </ul>
+          <h4>How Far in Advance Should You Order?</h4>
+          <p>We recommend ordering at least 4–6 weeks before your wedding date. This gives time for design approval, production, and a buffer for delivery. During peak wedding season (May–September) we get busy — the earlier the better.</p>
+          <h4>Hiring vs Buying</h4>
+          <p>Buying your own sign is often better value than hiring for one day, especially since you get to keep it as a memento. Many couples hang their sign in their home after the wedding. Get in touch and we'll find the right option for your budget.</p>
+        `
+      }
+    ];
+
+    function openBlogPost(index) {
+      const post = blogPosts[index];
+      document.getElementById('blogModalTitle').textContent = post.title;
+      document.getElementById('blogModalBody').innerHTML = `
+        <div class="blog-meta-top">${post.tag}</div>
+        ${post.content}
+      `;
+      openModal('blog');
+    }
+
+    // Email signup
+    function handleEmailSignup() {
+      const email = document.getElementById('signupEmail').value.trim();
+      if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+      document.getElementById('signupEmail').disabled = true;
+      document.querySelector('.email-signup-btn').disabled = true;
+      document.getElementById('emailSuccessMsg').style.display = 'block';
+    }
+
+    // Stripe Payment Link
+    function handleStripePay() {
+      const name = document.getElementById('payerName').value.trim();
+      const email = document.getElementById('payerEmail').value.trim();
+      if (!name || !email) { alert('Please enter your name and email address first.'); return; }
+      const btn = document.getElementById('stripePayBtn');
+      btn.disabled = true;
+      btn.innerHTML = '<span>⏳</span> Redirecting to checkout...';
+      document.getElementById('stripeSuccess').style.display = 'block';
+      setTimeout(() => {
+        window.open('https://buy.stripe.com/test_28EdR84LRfqUf2BcFO1ZS00', '_blank');
+        btn.disabled = false;
+        btn.innerHTML = '<span>🔒</span> Pay Deposit Securely →';
+      }, 1000);
+    }
+
+    // Cookie banner
+    function acceptCookies() {
+      localStorage.setItem('cookieConsent', 'accepted');
+      document.getElementById('cookieBanner').classList.remove('visible');
+    }
+    function declineCookies() {
+      localStorage.setItem('cookieConsent', 'declined');
+      document.getElementById('cookieBanner').classList.remove('visible');
+    }
+    window.addEventListener('load', () => {
+      if (!localStorage.getItem('cookieConsent')) {
+        setTimeout(() => document.getElementById('cookieBanner').classList.add('visible'), 1200);
+      }
+    });
+
+    // Modals
+    function openModal(type) {
+      document.getElementById(type + 'Modal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(type) {
+      document.getElementById(type + 'Modal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    // Close modal on overlay click
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', e => {
+        if (e.target === overlay) {
+          overlay.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+      });
+    });
+    // Close on Escape key
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.open').forEach(m => m.classList.remove('open'));
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Init
+    applyGlow();
+    updateSize(2);
+  </script>
+</body>
+</html>
